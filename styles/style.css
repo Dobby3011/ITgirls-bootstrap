@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header__circle_red,
+.header__circle_yellow,
+.header__circle_green {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+}
+
+.header__circle_yellow {
+    background: yellow;
+}
+
+.header__circle_green {
+    background: green;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main {
+    grid-area: main;
+    grid-template-rows: 30% 30% 30%;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 70% 15%;
+    height: 1000px;
+    grid-template-areas:
+        "header header header"
+        "main sidebar sidebar"
+        "footer sidebar sidebar";
+}
+
+.header__circle {
+    display: grid;
+    grid-template-columns: 3% 3% 3%;
+}
+
+.header__button {
+    justify-self: end;
+    padding-right: 74px;
+}
+
+.header__button_basket {
+    background-color: rgb(89, 46, 196);
+    height: 38px;
+    width: 115px;
+    color: white;
+    font-family: Intro;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 13px;
+    border-radius: 30px;
+}
+
+.header__logo {
+    padding-left: 76px;
+}
+
+.main__h1 {
+    font-family: Intro;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: left;
+    align-self: center;
+    padding-left: 126px;
+
+}
+
+.main__text_p {
+    font-family: Roboto Slab;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    align-self: center;
+    padding-left: 126px;
+}
+
+.main__button_buy {
+    background-color: rgb(89, 46, 196);
+    height: 84px;
+    width: 270px;
+    border-radius: 50px;
+    font-family: Intro;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 35px;
+    color: white;
+}
+
+.main__button {
+    padding-left: 116px;
+    align-self: center;
+}
+
+.footer__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    padding-left: 126px;
+}
+
+.footer__menu_link {
+    font-family: Roboto Slab;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #5222D0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #2F73B6
+}
+
+a:after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: #65a3dd;
+    transition: width 0.4s ease-in-out;
+}
+
+a:hover:after,
+a:focus:after {
+    width: 100%;
+}
+
+a:hover {
+    color: #6591dd;
+}
